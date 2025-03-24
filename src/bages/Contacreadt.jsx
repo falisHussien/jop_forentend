@@ -8,7 +8,7 @@ const ContactMessages = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/contact");
+        const response = await axios.get("https://jop-backend-1.onrender.com/api/contact");
         setMessages(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);

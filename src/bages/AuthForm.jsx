@@ -23,7 +23,7 @@ const AuthForm = ({ isLogin }) => {
     
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/${isLogin ? 'login' : 'register'}`,
+        `https://jop-backend-1.onrender.com/api/${isLogin ? 'login' : 'register'}`,
         { username, password }
       );
   

@@ -22,7 +22,7 @@ const ContactForm = () => {
     setErrorMessage("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/contact", formData);
+      const response = await axios.post("https://jop-backend-1.onrender.com/api/contact", formData);
       setSuccessMessage(response.data.message);
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {

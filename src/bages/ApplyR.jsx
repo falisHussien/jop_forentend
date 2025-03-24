@@ -10,7 +10,7 @@ const JobApplications = () => {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/applyread");
+        const response = await axios.get("https://jop-backend-1.onrender.com/applyread");
         console.log("API Response:", response.data); // Debugging
         setApplications(response.data || []); // Update applications data
         setLoading(false); // Set loading to false after data is fetched
@@ -56,7 +56,7 @@ const JobApplications = () => {
                   <div className="mt-4">
                     <h4 className="text-lg font-semibold">Resume:</h4>
                     <embed
-                      src={`http://localhost:5000/uploads/${app.resume}`}
+                      src={`https://jop-backend-1.onrender.com/uploads/${app.resume}`}
                       width="100%"
                       height="500px"
                       type="application/pdf"
@@ -70,7 +70,7 @@ const JobApplications = () => {
                   <div className="mt-4">
                     <h4 className="text-lg font-semibold">Resume:</h4>
                     <img
-                      src={`http://localhost:5000/uploads/${app.resume}`}
+                      src={`https://jop-backend-1.onrender.com/uploads/${app.resume}`}
                       alt="Resume"
                       width="100%"
                       className="border border-gray-300 rounded-md"

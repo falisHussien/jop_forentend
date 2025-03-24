@@ -42,7 +42,7 @@ const Apply = () => {
     if (file) form.append("resume", file);
 
     try {
-      const response = await axios.post("http://localhost:5000/apply", form, {
+      const response = await axios.post("https://jop-backend-1.onrender.com/apply", form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Application Submitted!");
